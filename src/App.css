@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body, html {
+  overflow: scroll;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ECFFFB;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px; /* Untuk scrollbar horizontal */
+}
+
+/* Kelas untuk elemen yang akan dianimasikan saat scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Kelas animasi yang ditambahkan saat elemen terlihat di layar */
+.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.scale-in.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fade-in animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.cr{
+  margin-left: 71rem;
+}
